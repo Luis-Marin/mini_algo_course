@@ -1,0 +1,40 @@
+# Archivos de entorno secretos
+.env
+
+# Archivos generados por el sistema
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Archivos de configuración locales
+.vscode/
+.idea/
+
+# Imágenes y recursos binarios
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+
+# Archivos de datos y reportes
+*.csv
+*.xlsx
+*.xls
+
+# Archivos HTML y estáticos
+*.html
+*.htm
+
+# Archivos de logs y datos temporales
+*.log
+*.tmp
+*.temp
+
+# Librerías instaladas
+venv/
+.env/
+
+# Otros archivos no relevantes para el repositorio
+.DS_Store
+Thumbs.db

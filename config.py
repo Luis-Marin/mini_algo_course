@@ -5,3 +5,8 @@ ACCOUNT_SIZE = 5000.0
 RISK_PERCENT = 0.01
 # Porcentaje de take profit con respecto al precio de entrada
 TP_PERCENT = 0.02
+# Timeframe de análisis
+TIMEFRAME = "1h"
+# Valores para EMAs
+VALOR_EMA_RAPIDA = 12
+VALOR_EMA_LENTA = 26
