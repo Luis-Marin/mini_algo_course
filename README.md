@@ -34,3 +34,40 @@ entry_price = 100.0
 stop_loss_price = 98.0
 result = calculate_sl_tp(entry_price, stop_loss_price)
 ```
+
+Descripción del método `get_alpaca_data`
+
+El módulo `get_alpaca_data.py` descarga datos de barras de Alpaca usando el endpoint configurado en `config.py` y las credenciales almacenadas en `.env`.
+
+La función principal es:
+
+- `get_alpaca_data(symbol, env_path=".env")`
+
+Parámetros:
+
+- `symbol`: símbolo del activo a descargar (por ejemplo `ACM`)
+- `env_path`: ruta opcional del archivo `.env` donde se guardan `API_KEY` y `SECRET_KEY`
+
+Los valores de fechas y timeframe se obtienen desde `config.py`:
+
+- `ALPACA_START_DATE`: fecha de inicio de los datos
+- `ALPACA_END_DATE`: fecha de fin de los datos
+- `TIMEFRAME`: ventana temporal para las barras, por ejemplo `"1h"`
+
+Ejemplo de uso:
+
+```python
+from get_alpaca_data import get_alpaca_data
+
+result = get_alpaca_data("ACM")
+print(result)
+```
+
+Asegúrate de tener en `.env` las credenciales de Alpaca:
+
+```dotenv
+API_KEY = <tu_api_key>
+SECRET_KEY = <tu_secret_key>
+```
+
+Y de configurar las fechas y timeframe en `config.py` según tus necesidades.
